@@ -41,7 +41,31 @@ services=[("🧽","Standard House Cleaning","Kitchens, bathrooms, dusting, floor
 areas=["Fort Wayne, IN","<span class='ph'>Placeholder: confirm nearby towns served</span>"],
 extra="<p><span class='ph'>Placeholder: service list, hours, photos and reviews to be confirmed with owner</span></p>",
 heroalt="Sparkling clean white kitchen with marble countertops",alt="Gloved hands carrying a caddy of cleaning supplies and microfiber cloths",pitch="We bring the supplies, the checklist and the elbow grease, so you come home to a kitchen and bathroom that truly sparkle.",foot="Fort Wayne, Indiana")
-for s,d in (("frames-cleaning-crew",F),("klean-freaks-cleaning",K)):
+S=dict(name="Sharons Crystal Touch LLC",title="Sharons Crystal Touch LLC | House Cleaning in Fort Wayne, IN",
+desc="Thorough, pet-friendly house cleaning, deep refreshes, rental turnovers and move-in/move-out cleaning in Fort Wayne, IN. Call (260) 450-9581.",
+tel="(260) 450-9581",telraw="+12604509581",email="sharonscrystaltouch@gmail.com",color="#7b3fa0",
+h1="Cleaner, Calmer Spaces in Fort Wayne",sub="Thorough house cleaning from Sharons Crystal Touch LLC. Pet-friendly, dependable and detail-focused.",
+services=[("🏠","House Cleaning","Thorough cleaning for your home."),("✨","Deep Refresh","A detailed top-to-bottom clean."),("🔑","Rental Turnovers","Get your rental guest-ready between stays."),("📦","Move-In / Move-Out","Empty-home cleaning before or after a move.")],
+areas=["Fort Wayne, IN","<span class='ph'>Placeholder: confirm nearby towns served</span>"],
+extra="<p><b>Hours:</b> Mon–Fri 9am–5pm · Sat–Sun closed</p><p>Pet-friendly · Dependable · Detail-focused</p>",
+heroalt="Bright, freshly cleaned living room with lavender accents",alt="Gloved hands polishing a bathroom mirror and faucet while a dog rests nearby",pitch="Pet-friendly and detail-focused: we take care of the scrubbing and polishing so you can enjoy a home that feels clean and calm.",foot="Fort Wayne, Indiana")
+E=dict(name="Elite Cleaners of Fort Wayne LLC",title="Elite Cleaners of Fort Wayne LLC | Detailed House Cleaning in Fort Wayne, IN",
+desc="Detailed deep house cleaning in Fort Wayne, IN: bi-weekly, monthly, one-time, move-in/move-out, post-construction and commercial. 10% senior discount. Call (260) 310-2101.",
+tel="(260) 310-2101",telraw="+12603102101",email="elitecleanersofftw@gmail.com",color="#0f6e5c",
+h1="Detailed Cleaning, Every Time",sub="Elite Cleaners of Fort Wayne LLC specializes in deep cleaning for homes in Fort Wayne. No basic cleans, just thorough ones.",
+services=[("🔁","Bi-Weekly Cleans","Deep cleans that keep busy homes in great shape."),("📅","Monthly Cleans","Flexible and easy to reschedule."),("✨","One-Time Cleans","No pressure to commit, great for events."),("📦","Move-In / Move-Out","Walls, inside cabinets, closets, fridge and oven."),("🏗️","Post-Construction","Clear the dust after a project."),("🏢","Commercial","Cleaning for business spaces.")],
+areas=["Fort Wayne, IN","<span class='ph'>Placeholder: confirm nearby towns served</span>"],
+extra="<p><b>10% senior citizen discount.</b> Inside fridge &amp; oven cleaning can be added with advance notice (rate changes apply).</p><p><span class='ph'>Placeholder: hours and customer reviews to be added with owner approval</span></p>",
+heroalt="Spotless modern kitchen with a clean, open oven",alt="Gloved hand wiping inside a kitchen cabinet shelf next to a cleaning caddy",pitch="Our cleaners are trained to notice every detail, even the ones you may be missing, so you step into an immaculate home.",foot="Fort Wayne, Indiana")
+D=dict(name="It’s Us or Dust",title="It’s Us or Dust | Home & Office Cleaning in Fort Wayne, IN",
+desc="One-time, regular, deep, move-in/move-out, post-construction, window and office cleaning in Fort Wayne, IN. Call 260-310-3294.",
+tel="260-310-3294",telraw="+12603103294",email="its.us.or.dust@gmail.com",color="#c0562b",
+h1="Transform Your Home or Office",sub="We make your home or office spotless so you can enjoy the important things in life. A smaller team you can know and trust.",
+services=[("🧹","Regular &amp; Deep Cleaning","Bathrooms, kitchens, living spaces and bedrooms."),("✨","One-Time Cleaning","Special occasions, spring cleaning, after parties."),("📦","Move-In / Move-Out","Ready for the next occupant, or for staging."),("🏗️","Post-Construction","Dust and debris cleared away."),("🪟","Window Cleaning","Sparkling clean windows."),("🏢","Office / Commercial","A clean space for a productive day."),("📝","Customized Plans","A plan built around your home and budget.")],
+areas=["Fort Wayne, IN","Surrounding neighborhoods"],
+extra="<p>We bring our own supplies and equipment, or use your preferred products on request.</p><p><span class='ph'>Placeholder: hours and reviews to be confirmed with owner</span></p>",
+heroalt="Bright, dust-free room with sunlight on clean floors",alt="Gloved hand dusting a bookshelf and window sill, vacuum in background",pitch="After working for larger cleaning companies, we built a smaller business so clients can know and trust the people in their homes.",foot="Fort Wayne, Indiana")
+for s,d in (("frames-cleaning-crew",F),("klean-freaks-cleaning",K),("sharons-crystal-touch",S),("elite-cleaners-ftw",E),("its-us-or-dust",D)):
     os.makedirs(s,exist_ok=True);open(f"{s}/index.html","w").write(page(d))
 open("index.html","w").write('<!doctype html><meta name=robots content=noindex><title>Site demos</title><p>Demo previews.</p>')
 open(".nojekyll","w")
